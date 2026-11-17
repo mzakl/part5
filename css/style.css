@@ -1,5 +1,229 @@
+:root {
+  --primary-colour: #f2f5f7;
+  --complementary-colour: #16324f;
+  --accent-colour: #007f78;
+  --active-tab-colour: #16324f;
+  --button-hover-colour: #16324f;
+  --font-colour-light: #ffffff;
+  --font-colour-dark: #000000;
+  --font-colour-light: #ffffff;
+  --backgroung-colour-light: #ffffff;
+}
+
 * {
   box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: 'Segoe UI', sans-serif;
   margin: 0;
-  padding: 0;
+  background-color: var(--primary-colour);
+  color: var(--complementary-colour);
+}
+
+main {
+  flex-grow: 1;
+}
+
+header {
+  background-color: var(--complementary-colour);
+  color: var(--font-colour-light);
+  padding: 30px 0;
+  margin-bottom: 20px;
+}
+
+header h1 {
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+header p {
+  margin: 0;
+}
+
+footer {
+  background-color: var(--complementary-colour);
+  color: var(--font-colour-light);
+  padding: 20px 0;
+  margin-top: 20px;
+}
+
+footer p {
+  margin: 0;
+}
+
+h2 {
+  color: var(--complementary-colour);
+}
+
+.text-center {
+  text-align: center;
+}
+
+.container {
+  max-width: 1300px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.cpx-flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 20px;
+  min-height: 450px;
+}
+
+.list-manage {
+  width: 50%;
+  border: 1px solid var(--complementary-colour);
+  padding: 20px;
+  border-radius: 10px;
+  min-height: 450px;
+}
+
+.search-sort {
+  width: 50%;
+  border: 1px solid var(--complementary-colour);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid var(--complementary-colour);
+}
+
+th {
+  background-color: var(--complementary-colour);
+  color: var(--font-colour-light);
+  padding: 10px 5px;
+}
+
+td {
+  padding: 10px 5px;
+}
+
+/* Centre all headers and data cells */
+
+th,
+td {
+  text-align: center;
+  border-bottom: 1px solid;
+}
+
+/* Left-align the Title column */
+th:nth-child(2),
+td:nth-child(2) {
+  text-align: left;
+}
+
+button {
+  display: inline-block;
+  background-color: var(--accent-colour);
+  color: var(--font-colour-light);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: var(--button-hover-colour);
+}
+
+.tx {
+  display: flex;
+  flex-direction: row;
+}
+
+.tablinks {
+  border-right: 1px solid var(--complementary-colour);
+}
+
+.tab button {
+  flex: 1;
+  border-radius: 0;
+}
+
+input {
+  padding: 7px 20px;
+}
+
+.tabcontent {
+  padding: 10px 0;
+}
+
+.tabcontent label {
+  display: inline-block;
+  width: 15%;
+}
+
+.tabcontent input {
+  display: inline-block;
+  width: 84%;
+}
+
+.tabcontent button {
+  width: 30%;
+  display: block;
+  margin: 0 auto;
+}
+
+.mb-3 {
+  margin-bottom: 1rem;
+  /* 1rem = 16px (rem - based on the body tag font size. */
+}
+
+.msgBox {
+  margin-top: 10px;
+  padding: 10px;
+  text-align: center;
+  font-size: 16px;
+  display: none;
+}
+
+.tab button.active {
+  background-color: var(--active-tab-colour);
+}
+
+.sort-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.refresh-button {
+  margin-left: auto;
+}
+
+.movie-fields {
+  min-height: 200px;
+}
+
+.search-row {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.search-row input {
+  flex: 1;
+  min-width: 0;
+}
+
+.search-row button {
+  flex: 0 0 140px;
+}
+
+tbody tr:nth-child(even) {
+  background-color: var(--backgroung-colour-light);
+}
+
+#sort {
+  margin-top: 60px;
 }
