@@ -7,6 +7,159 @@
     <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
+    <header class="text-center">
+      <h1>Movie Manager</h1>
+      <p>Organise & Rate Your Favourite Movies</p>
+    </header>
+    <main class="container">
+      <div id="control-panel" class="cpx-flex">
+        <section class="search-sort">
+          <!-- Section search / sort -->
+          <div id="search">
+            <form id="form-list-control">
+              <h2>Search</h2>
+              <label for="searchById">Movie ID</label>
+              <div class="search-row mb-3">
+                <input type="text" id="searchById" placeholder="Movie Id..." name="searchById" />
+                <button type="button" name="btn-searchById" id="searchByIdBtn">Search By ID</button>
+              </div>
+              <label for="searchByTitle">Title</label>
+              <div class="search-row mb-3">
+                <input
+                  type="text"
+                  id="searchByTitle"
+                  placeholder="Movie title..."
+                  name="searchByTitle"
+                />
+                <button type="button" name="btn-searchByTitle" id="searchByTitleBtn">
+                  Search By Title
+                </button>
+              </div>
+            </form>
+          </div>
+          <div id="sort">
+            <h2>Sort</h2>
+            <div class="sort-actions">
+              <button type="button" name="btn-a2z" id="sortA2ZBtn">Title (A - Z)</button>
+              <button type="button" name="btn-z2a" id="sortZ2ABtn">Title (Z - A)</button>
+              <button type="button" name="btn-bestRating" id="sortByRatingBtn">Best Movies</button>
+              <button type="button" name="btn-refresh" id="refreshBtn" class="refresh-button">
+                Refresh
+              </button>
+            </div>
+          </div>
+          <!-- End of search / sort Section -->
+        </section>
+
+        <section class="list-manage">
+          <h2>Movie Maintenance</h2>
+          <!-- Start Tab Section -->
+          <!-- The tabs -->
+
+          <div class="tab tx">
+            <!-- The buttons to change tabs -->
+            <button id="addTab" class="tablinks">Add a New Movie</button>
+            <button id="updateTab" class="tablinks">Update a Movie</button>
+            <button id="deleteTab" class="tablinks">Delete a Movie</button>
+          </div>
+          <!-- End Tab Section -->
+
+          <!-- The tab content. Made up of add movie / update movie / delete movie -->
+          <!-- Add movie Form -->
+          <div id="Add" class="tabcontent">
+            <form id="form-add">
+              <div class="movie-fields">
+                <div class="mb-3">
+                  <label for="addMovieId">Movie ID: </label>
+                  <input type="text" placeholder="Movie Id..." name="movieId" id="addMovieId" />
+                </div>
+                <div class="mb-3">
+                  <label for="addTitle">Title: </label>
+                  <input type="text" placeholder="Title..." name="title" id="addTitle" />
+                </div>
+                <div class="mb-3">
+                  <label for="addYear">Year: </label>
+                  <input type="text" placeholder="Year..." name="year" id="addYear" />
+                </div>
+                <div class="mb-3">
+                  <label for="addRating">Rating: </label>
+                  <input type="text" placeholder="Rating (1 - 10)" name="rating" id="addRating" />
+                </div>
+              </div>
+              <button type="button" name="submit" id="addSubmit">Submit</button>
+            </form>
+            <div id="msgAdd" class="msgBox"></div>
+          </div>
+          <!-- End of Add movie Form -->
+
+          <!-- Update movie Form -->
+          <div id="Update" class="tabcontent">
+            <form id="form-update">
+              <div class="movie-fields">
+                <div class="mb-3">
+                  <label for="upMovieId">Movie ID: </label>
+                  <input type="text" placeholder="Movie Id..." name="movieId" id="upMovieId" />
+                </div>
+                <div class="mb-3">
+                  <label for="upTitle">Title: </label>
+                  <input type="text" placeholder="Title..." name="title" id="upTitle" />
+                </div>
+                <div class="mb-3">
+                  <label for="upYear">Year: </label>
+                  <input type="text" placeholder="Year..." name="year" id="upYear" />
+                </div>
+                <div class="mb-3">
+                  <label for="upRating">Rating: </label>
+                  <input type="text" placeholder="Rating (1 - 10)" name="rating" id="upRating" />
+                </div>
+              </div>
+              <button type="button" name="submit" id="updateSubmit">Submit</button>
+            </form>
+            <div id="msgUpdate" class="msgBox"></div>
+          </div>
+          <!-- End of Update movie Form -->
+
+          <!-- Delete movie Form -->
+          <div id="Delete" class="tabcontent">
+            <!-- <h2>Delete a Movie</h2> -->
+            <form id="form-delete">
+              <div class="movie-fields">
+                <div class="mb-3">
+                  <label for="delMovieId">Movie ID: </label>
+                  <input type="text" placeholder="Movie Id..." name="movieId" id="delMovieId" />
+                </div>
+              </div>
+              <button type="button" name="submit" id="deleteSubmit">Submit</button>
+            </form>
+            <div id="msgDelete" class="msgBox"></div>
+            <!-- End of Delete movie Form -->
+          </div>
+          <!-- End of tab content -->
+        </section>
+      </div>
+
+      <section>
+        <h2>Movie List</h2>
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th>Id</th>
+                <th>Title</th>
+                <th>Year</th>
+                <th>Rating</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+
+    <footer class="text-center">
+      <p>All Rights Reserved &copy; 2026</p>
+    </footer>
+
     <script src="./js/movie.js"></script>
     <script src="./js/movie-list.js"></script>
     <script src="./js/app.js"></script>
