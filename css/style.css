@@ -1,11 +1,11 @@
 :root {
   --primary-colour: #f2f5f7;
   --complementary-colour: #16324f;
-  --accent-colour: #007f78;
-  --active-tab-colour: #16324f;
-  --button-hover-colour: #16324f;
+  --accent-colour: #005954;
+  --active-tab-colour: #82181a;
+  --button-hover-colour: #82181a;
   --font-colour-light: #ffffff;
-  --font-colour-dark: #000000;
+  --font-colour-dark: #16324f;
   --font-colour-light: #ffffff;
   --backgroung-colour-light: #ffffff;
 }
